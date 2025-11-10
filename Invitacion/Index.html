@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <title>ADRIPIXELS</title>
     </head>
     <body>
@@ -41,8 +42,17 @@
            <p id="WelcomeText" class="efecto-typing text">* Estás cordialmente invitada/o a la apertura de mi canal de Youtube, en el podrás encontrar gameplays, vlogs y muchas cosas más.<br>
             ¡Suscribete para unirte a la aventura!</p>
             <div class="botones">
-            <div class="botones">
-                <a href="#" target="_blank" class="btn">SUSCRIBETE</a>
+                <button onclick="efecto.play()" id="open" class="btn">SUSCRIBETE</button>
+                <div class="modal-container" id="modal-container">
+                    <div class="confetti-overlay" id="confetti-overlay">
+                        <img src="/Invitacion/img/Confetti.gif" alt="Confeti" class="confetti-gif">
+                    </div>
+                    <div class="modal">
+                        <h2>¡GRACIAS POR SUSCRIBIRTE!</h2>
+                        <p>Ahora no te perderas de ningún video</p>
+                        <button id="closebtn">CERRAR</button>
+                    </div>
+                </div>
                 <a href="/Invitacion/Formulario.html" class="btn">CONFIRMAR ASISTENCIA</a>
             </div>
          </section>
@@ -56,6 +66,12 @@
 
         <section class="text-space hide" id="SocialMediaSection">
             <p class="efecto-typing text"> * ¡Sigueme en todas mis redes sociales!</p>
+            <div class="social-links">
+                  <a href="https://www.youtube.com/@adrianaleon1236" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                  <a href="https://www.twitch.tv/arcanefairy4" target="_blank" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+                  <a href="https://x.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="https://github.com/arcanefairy" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
         </section>
 
         <footer>
@@ -66,3 +82,4 @@
     </body>
     <script src="efectos.js" defer></script>
 </html>
+
