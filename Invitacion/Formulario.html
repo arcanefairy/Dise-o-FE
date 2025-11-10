@@ -19,15 +19,21 @@
          </section>
 
          <section class="text-space" id="FormSection">
-            <div>
-            <p id="nombre" class="efecto-typing text">* Nombre completo:</p>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <div id="error"></div>
+            <form id="form">
+            <div class="formulario">
+            <label id="nombre" class="efecto-typing text">* Nombre completo:</label>
+            <input class="input-left" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
             </div>
-            <div class="form">
-            <p id="correo" class="efecto-typing text">* Correo electrónico:</p>
+            <div class="formulario">
+            <label id="correo" class="efecto-typing text">* Correo electrónico:</label>
             <input type="email" id="coreo" name="correo" class="space-mail" placeholder="tucorreo@ejemplo.com" required>
             </div>
-            <a href="" class="btn space-btn">ENVIAR</a>
+            <div class="decision">
+            <button onclick="efecto.play()" type="submit" class="btn space-btn">ENVIAR</button>
+            <button type="reset" class="btn space-btn">LIMPIAR</button>
+            </div>
+            </form>
          </section>
 
          <section class="text-space" id="BackSection">

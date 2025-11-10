@@ -94,5 +94,32 @@ function countdownTimer(params) {
     //Correr la función
     countdownTimer();
 
+//Mostrar modal al dar clic en el botón de suscribirte (y que muestre el confetti)
+const open = document.getElementById('open');
+const modal_container = document.getElementById('modal-container');
+const close = document.getElementById('closebtn');
+const confettiOverlay = document.getElementById('confetti-overlay'); 
+
+if (open && modal_container && close && confettiOverlay) { 
+
+    open.addEventListener('click', () => {
+        modal_container.classList.add('show');
+        confettiOverlay.classList.add('show-confetti'); 
+    });
+
+    close.addEventListener('click', () => {
+        modal_container.classList.remove('show');
+        confettiOverlay.classList.remove('show-confetti'); 
+    });
 
     
+    modal_container.addEventListener('click', function(event) {
+        if (event.target === modal_container) {
+            modal_container.classList.remove('show');
+            confettiOverlay.classList.remove('show-confetti'); 
+        }
+    });
+}
+
+var efecto = new Audio();
+efecto.src = "/Invitacion/music/saved_sound.mp3";
