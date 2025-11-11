@@ -121,5 +121,6 @@ if (open && modal_container && close && confettiOverlay) {
     });
 }
 
+//Efecto de sonido para los botones
 var efecto = new Audio();
 efecto.src = "/Invitacion/music/saved_sound.mp3";
